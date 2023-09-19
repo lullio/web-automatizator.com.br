@@ -11,6 +11,7 @@ if($_POST)
 
     $mail = new PHPMailer();
 
+
     $your_email = "felipe.lullio@bulls.digital";
 
 
@@ -267,14 +268,19 @@ if($_POST)
 
 
     //Server settings
-   $mail->isSMTP();                                            // Send using SMTP
+   $mail->isSMTP();     
+//    $mail->SMTPDebug = SMTP::DEBUG_SERVER; 
+//    $mail->SMTPDebug = 2;                                       // Send using SMTP
+//    $mail->Debugoutput = 'file'; // Saída de depuração para arquivo
+// $mail->Debugoutput = '/etc/nginx/phpmailer.log'; // Caminho para o arquivo de log
    $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-   $mail->Username   = 'felipe.lullio@bulls.digital';                     // SMTP username
-   $mail->Password   = 'kgakaggxxdrwmftw'; //'umpjdobcfyzcxysb';                         // SMTP password
+   $mail->Username   = 'lulliofelipe@gmail.com';                     // SMTP username
+   $mail->Password   = 'ugouqhpppbnseqep'; //'umpjdobcfyzcxysb';                         // SMTP password
    $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
    $mail->Port       = 465;                                    // TCP port to connect to
-
+   $mail = new PHPMailer\PHPMailer\PHPMailer();
+   $mail->SMTPDebug = 4;
 //    eeu coloquei $mail->SMTPDebug = 3;
     //Recipients
     $mail->setFrom($user_Email,$user_Name);
