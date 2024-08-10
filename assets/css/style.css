@@ -1632,6 +1632,15 @@ header .navbar  .social-icons{
   width: 100%;
   margin-left: 0;
 }
+select:required:invalid {
+  color: gray;
+}
+option[value=""][disabled] {
+  display: none;
+}
+option {
+  color: black;
+}
 .border-bottom {
   display: none;
 }

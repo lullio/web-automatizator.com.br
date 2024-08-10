@@ -219,3 +219,11 @@ $('.testimonial-carousel').owlCarousel({
 ======================================*/
 
 new WOW().init();
+
+/* ===================================
+       Contact Form
+  ====================================== */
+// capturar variáveis
+
+
+// regex - validar telefone
